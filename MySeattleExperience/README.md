@@ -1,6 +1,4 @@
-# Midterm Project
 
-** Due 11:59pm PT Thu Oct 28 **
 
 ## Goals
 
