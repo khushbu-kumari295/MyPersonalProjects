@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <title class="topic"> Welcome to my website. </title>
+</head>
+
+<body>
+
+    <div id="my-blog">
+        <header class="header">
+            <input type="checkbox" id="menu-bar" />
+            <label for="menu-bar">Menu</label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="aboutme.html?section=about-me">About</a></li>
+                    <li>
+                        <button type="button">Hiking</button>
+                        <ul>
+                            <li><a href="hiking.html?section=mount-rainer">Mount Rainer</a></li>
+                            <li><a href="hiking.html?section=snoqualmie">Snoqualmie</a></li>
+                            <li><a href="hiking.html?section=franklinfalls">Franklin Falls</a></li>
+                            <li><a href="hiking.html?section=sunrise">Sunrise Beach Park</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button">Seattle Famous Places</button>
+                        <ul>
+                            <li><a href="seattlefamousplaces.html?section=seattlecenter">Seattle Center</a></li>
+                            <li><a href="seattlefamousplaces.html?section=seattle waterfront">Seattle Waterfront</a>
+                            </li>
+                            <li><a href="seattlefamousplaces.html?section=lakeunionpark">Lake Union Park</a></li>
+                            <li><a href="seattlefamousplaces.html?section=downtownseattle">Downtown Seattle</a></li>
+                            <li><a href="seattlefamousplaces.html?section=mueseum of flight">Mueseum of flight</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="requestInfo.html?section=form">Request Info</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="mount-rainer" class="hike-content hide">
+                <h2 class="hiking-title">Mount Rainier</h2>
+                <div class="content-container">
+                    <div class="hiking-image-container">
+                        <img src="Images/MountRainier.jpg" alt="MountRainier Image">
+                        <img class="transition-image" src="Images/MountRainier1.jpg" alt="MountRainier Image">
+                    </div>
+                </div>
+                <div class="hiking-description">
+                    <p>Mount Rainier, also known as Tahoma or Tacoma, is a large active stratovolcano in
+                        the
+                        Cascade
+                        Range of the Pacific Northwest, located in Mount Rainier National Park about 59 miles (95 km)
+                        south-southeast of Seattle. With a summit elevation of 14,411 ft (4,392 m), it is the
+                        highest
+                        mountain in the U.S. state of Washington and the Cascade Range, the most topographically
+                        prominent
+                        mountain
+                        in the contiguous United States, and the tallest in the Cascade Volcanic Arc.
+
+                        Due to its high probability of eruption in the near future, Mount Rainier is considered one of
+                        the
+                        most
+                        dangerous volcanoes in the world, and it is on the Decade Volcano list. The large amount of
+                        glacial
+                        ice
+                        means that Mount Rainier could produce massive lahars which could threaten the entire Puyallup
+                        River
+                        valley.
+                        According to the United States Geological Survey, "about 80,000 people and their homes are at
+                        risk
+                        in
+                        Mount
+                        Rainier's lahar-hazard zones."</p>
+                </div>
+            </div>
+            <div id="snoqualmie" class="hike-content hide">
+                <h2 class="hiking-title">The Summit at Snoqualmie</h2>
+                <div class="content-container">
+                    <div class="hiking-image-container">
+                        <img src="Images/Snowqualmie1.jpg" alt="Snoqualmie image">
+                        <img class="transition-image" src="Images/Snowqualmie2.jpg" alt="Snoqualmie image">
+                    </div>
+                </div>
+                <div class="hiking-description">
+                    <p>The Summit at Snoqualmie, is a winter resort in the northwest United States, located on
+                        Snoqualmie
+                        Pass,
+                        Washington. It provides alpine skiing and snowboarding, Nordic skiing, and winter tubing. Owned
+                        and
+                        managed
+                        by Boyne Resorts, it is 52 miles east of downtown Seattle on Interstate 90</p>
+                </div>
+            </div>
+            <div id="franklinfalls" class="hike-content hide">
+                <h2 class="hiking-title">Franklin Falls</h2>
+                <div class="content-container">
+                    <div class="hiking-image-container">
+                        <img src="Images/Franklinfalls2.jpg" alt="Franklinfalls Image">
+                    </div>
+                </div>
+                <div class="hiking-description">
+                    <p>Franklin Falls Trail is a 2 mile heavily trafficked out and back trail located near Snoqualmie
+                        Pass,
+                        Washington that features a waterfall and is good for all skill levels. The trail is primarily
+                        used
+                        for
+                        hiking, walking, running, and camping and is accessible year-round. Dogs are also able to use
+                        this
+                        trail
+                        but
+                        must be kept on leash.</p>
+                </div>
+            </div>
+            <div id="sunrise" class="hike-content hide">
+                <h2 class="hiking-title">Sunrise Beach Park</h2>
+                <div class="content-container">
+                    <div class="hiking-image-container">
+                        <img src="Images/Sunrisebeach.jpg" alt="SunriseBeachPark Image">
+                        <img class="transition-image" src="Images/SunriseBeach1.jpg" alt="SunriseBeachPark Image">
+                    </div>
+                </div>
+                <div class="hiking-description">
+                    <p>
+                        Sunrise Beach Park is a 0.4 mile lightly trafficked loop trail located near Gig Harbor,
+                        Washington
+                        that
+                        features a great forest setting and is good for all skill levels.
+                        The trail is primarily used for walking and nature trips.</p>
+                </div>
+            </div>
+
+
+        </main>
+
+
+        <footer>
+
+            All the images used in this website are my own images
+        </footer>
+    </div>
+</body>
+<script src="dynamic.js"></script>
+
+</html>

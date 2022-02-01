@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <title class="topic"> Welcome to my website. </title>
+</head>
+
+<body>
+
+    <div id="my-blog">
+        <header class="header">
+            <input type="checkbox" id="menu-bar" />
+            <label for="menu-bar">Menu</label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="aboutme.html?section=about-me">About</a></li>
+                    <li>
+                        <button type="button">Hiking</button>
+                        <ul>
+                            <li><a href="hiking.html?section=mount-rainer">Mount Rainer</a></li>
+                            <li><a href="hiking.html?section=snoqualmie">Snoqualmie</a></li>
+                            <li><a href="hiking.html?section=franklinfalls">Franklin Falls</a></li>
+                            <li><a href="hiking.html?section=sunrise">Sunrise Beach Park</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button">Seattle Famous Places</button>
+                        <ul>
+                            <li><a href="seattlefamousplaces.html?section=seattlecenter">Seattle Center</a></li>
+                            <li><a href="seattlefamousplaces.html?section=seattle waterfront">Seattle Waterfront</a>
+                            </li>
+                            <li><a href="seattlefamousplaces.html?section=lakeunionpark">Lake Union Park</a></li>
+                            <li><a href="seattlefamousplaces.html?section=downtownseattle">Downtown Seattle</a></li>
+                            <li><a href="seattlefamousplaces.html?section=mueseum of flight">Mueseum of flight</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="requestInfo.html?section=form">Request Info</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <form class="form" action="/form" method="POST">
+                <h2 class="form-title">Hi, want to Explore Seattle together with me?</h2>
+                <h2 class="form-title">Fill out this form</h2>
+                <label for="name" class="required">Name</label>
+                <input name="name" required id="name" />
+                <label for="email" class="required">Email</label>
+                <input type="email" name="email" id="email" required />
+
+                <div class="checkbox">
+                    <input type="checkbox" name="communicate" id="communicate" />
+                    <label for="communicate">Get useful tips and inspiration via e-communication</label>
+                </div>
+                <label for="interest" class="required">Activity Of Interests</label>
+                <select id="interest" required name="interest">
+                    <option value="" disabled selected hidden>Please select</option>
+                    <option value="Hiking">Hiking</option>
+                    <option value="Board Games">Board Games</option>
+                    <option value="Movies">Movies</option>
+                    <option value="Kayaking">Kayaking</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="other-interest" class="other-interest hide">Other Area Of Interest</label>
+                <input name="other-interest" id="other-interest" class="other-interest hide" />
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+        <footer>
+            All the images used in this website are my own images
+        </footer>
+    </div>
+</body>
+<script src="dynamic.js"></script>
+
+</html>

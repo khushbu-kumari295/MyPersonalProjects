@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+}
+/**
+* General Structure: 
+* - Define global variables (Colors)
+* - Global CSS properties : font/margin
+* - Define Layout properties (Grid)
+* - Define CSS properties for Menu
+* - Define Elements properties: background/colors/font-Size
+* - Define Animation & Transformation Properties 
+*/
+
+/** Global Variables */
+#my-blog {
+    --header-background-color: rgb(0, 204, 255);
+    --pagetitle-color: indianred;
+    --menu-button-color: white;
+    --submenu-text-color: white;
+    --submenu-background-color: rgb(0, 162, 255);
+    --localnav-hover-color: wheat;
+    --main-background-color: whitesmoke;
+    --footer-background-color: black;
+    --footer-text-color: blanchedalmond;
+    --link-visted-color: blanchedalmond;
+    --animation-from-color:  indianred;
+    --animation-to-color: red;
+    --animation-middle-color: white;   
+    --pageheader-hover-color: red;
+}
+
+/** Global CSS properties */
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/** Layout properties */
+#my-blog {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 3rem 1fr 3rem;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+main h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+ .menubar {
+    grid-area: menubar;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    
+ }
+
+.menubar > ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+  }
+
+.my-image {
+    margin: 0 2rem 2rem 2rem;
+}
+
+.main-content {
+    margin: 2rem;
+}
+
+.self-content {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 1.5rem;
+}
+
+.intro {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 3rem;
+    text-align: start;
+}
+
+.aboutme {
+    margin: 2.5rem;
+}
+
+.localnav {
+    grid-area: localnav;
+    padding: 0.5rem;
+    background-color: orange;
+}
+.localnav ul {
+   display: flex;
+   flex-direction: column;
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+main .seattle-experience {
+    grid-area: main;
+    padding: 2rem;
+    background-color: var(--main-background-color);
+    height: 80vh;
+
+    
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--footer-background-color);
+    text-align: center;
+    padding: 1rem;
+    color: var(--footer-text-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+ /** Define CSS properties for Menu */
+ .menu > li {
+    padding: 0 1rem;
+    width: 120%;
+    position: relative;
+    width: max-content;
+}
+.menu button {
+    background-color: transparent;
+    border: 0;
+    font:inherit;
+    color: var(--menu-button-color);
+    width: max-content;
+}
+.menu > li:focus-within .submenu, 
+.menu > li:hover .submenu{
+    max-height: 90vh;
+    visibility: visible;
+}
+.submenu {
+    display: flex;
+    display: grid;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    min-width: max-content;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    background-color:var(--submenu-background-color);
+    color: var(--submenu-text-color);
+    z-index: 10;
+}
+.submenu li {
+    border: 1px solid white;
+    min-width: 12rem;
+}
+
+.submenu a {
+    display: inline-block;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+}
+.submenu a:hover {
+    background-color: linen;
+    color: black;
+}
+
+
+ /** Define Elements properties: background/colors/font-Size */
+header {
+    background-color: var(--header-background-color);
+}
+.page-header {
+    font-size: 2rem;
+    color: var(--pagetitle-color);    
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.topic {
+    height: 100%;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+header {
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.submenu a:link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .submenu a:visited {
+    text-decoration: none;
+    color: white;
+  }
+
+  .submenu li:hover a {
+      color: black;
+  }
+
+.localnav li {
+    padding: 1rem;
+}
+
+.localnav li:hover {
+    background-color: var(--localnav-hover-color);
+    padding: 1rem;
+}
+
+footer a:visited, footer a:link {
+    text-decoration: none;
+    color: var(--link-visted-color);
+  }
+
+ /** Define Animation & Transformation Properties */
+
+/** Image Transitions */
+.image-container {
+    height: 20rem;
+    width: 100%;
+    position: relative;
+}
+
+.image-container img, .hiking-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.transition-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.transition-image:hover {
+    opacity: 1;
+}
+
+.hiking-image-container {
+    height: 22rem;
+    width: 40rem;
+    position: relative;
+}
+.content-container {
+    display:flex;
+    justify-content: center;
+    margin: 4rem;
+}
+
+.hiking-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hiking-description {
+    margin: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.hide {
+    display: none;
+}
+
+/* Form */
+
+.form {
+    display: flex;
+    flex-direction: column; 
+    max-width: 30rem;
+    margin: auto;  
+    border: 1px solid black;
+    padding: 1rem; 
+    background-color: antiquewhite;
+}
+
+.form label {
+    font-size: large;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form .checkbox {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form .form-title {
+    text-align: center;
+}
+
+.form select {
+    height: 2rem;    
+}
+
+.form button {
+    margin-top: 3rem;
+    margin-bottom: 1rem;  
+    background-color: navajowhite;
+    color: black;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: larger;
+}
+
+.form input {
+    height: 2rem;
+}
+
+.form .checkbox input {
+    height: 1rem;
+}
+
+select:invalid, input:invalid {
+    border: 1px solid red;
+}
+
+.thank-you {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 12rem;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 3rem;
+    background-color: antiquewhite;
+    padding: 8rem;
+    flex-direction: column;
+}
+
+.thankyou-link {
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-align: center;
+}
+.thankyou-message {
+    text-align: center;
+}
+/* Thank you */
+
+h2 {
+    margin: 1.5rem;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}
+
+
+.seattle-image-mobile {
+    display: none;
+}
+
+.seattle-image-desktop {
+    display: inherit;
+}
+
+/** mobile size **/
+@media(max-width: 720px) {
+    .thank-you {
+        font-size: 1rem;
+        padding: 4rem;
+        flex-direction: column;
+    }
+    
+    .thankyou-link {
+        font-size: 1rem;
+        
+    }
+
+    .seattle-image-mobile {
+        display: inherit;
+    }
+
+    .seattle-image-desktop {
+        display: none;
+    }
+    
+}
