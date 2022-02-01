@@ -1,0 +1,47 @@
+.about-me {
+    position: absolute;
+    top: 12%;
+    width: 100%;
+}
+
+
+.about-me img {
+    width: 15rem;
+    border-radius: 50%;
+    justify-self: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+
+.main-title {
+    text-align: center;
+
+}
+
+.title-name {
+    margin: auto;
+    height: 5rem;
+
+
+}
+
+.Sub-Title {
+    margin: auto;
+    padding: 0.5rem;
+
+}
+
+.journey-title {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.study {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.project-section {
+    text-align: center;
+}
