@@ -10,7 +10,7 @@ export function MyThoughts() {
             <div className="quotes">
                 <div>Before dreaming of success first work for it</div>
                 <div>Hard work beats talent</div>
-                <div>If you want to enjoy cofee you first have to make it</div>
+                <div>life is all about a cup of coffee. Its all about how you make it.</div>
                 <div>Hardwork always pays off</div>
                 <div>Nothing is impossible, Impossile word itself shows I'm possible</div>
                 <div>Learn everyday since practice makes a person perfect</div>
